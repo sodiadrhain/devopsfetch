@@ -65,6 +65,7 @@ bash devopsfetch -n nginx_domain
 # Examples:
 
 bash devopsfetch -u
+
 bash devopsfetch -u root
 ```
 
@@ -76,6 +77,7 @@ bash devopsfetch -u root
 # Examples:
 
 bash devopsfetch -t
+
 bash devopsfetch -t 2024-07-14
 ```
 
