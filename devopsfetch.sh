@@ -190,14 +190,15 @@ get_activity_time_range() {
     fi
 
     if [[ $1 != "" ]]; then
-        printf "Displaying all activity log:\n"
-        log "gets all log activities"
+        printf "Displaying activity log for $1:\n"
+        cat $log_path | grep $1
+        log "gets all log activities $1"
         exit 0
     fi 
 
-    printf "Displaying activities for $1:\n"
-    grep "$1" $log_path
-    log "gets log activities for $1"
+    printf "Displaying all log activities:\n"
+    cat $log_path
+    log "gets log activities"
 }
 
 log() {
