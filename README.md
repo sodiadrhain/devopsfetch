@@ -40,20 +40,7 @@ bash devopsfetch -p 5000
 
 bash devopsfetch -d
 
-bash devopsfetch -d docker_name
-```
-
-### PORTS
-
-```sh
-# - Display all active ports and services (-p or --port)
-# - Provide detailed information about a specific port (-p <port_number>)
-
-# Examples:
-
-bash devopsfetch -p
-
-bash devopsfetch -p 5000
+bash devopsfetch -d container_name
 ```
 
 ### Nginx
