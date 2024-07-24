@@ -29,4 +29,7 @@ remove_systemd
 sudo chmod +x uninstall.sh
 sed -i '/^alias devopsfetch/d' ~/.bashrc
 source ~/.bashrc
+
+# remove logs
+sudo rm /var/log/devopsfetch.log
 echo "uninstall completed"
