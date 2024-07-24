@@ -206,7 +206,7 @@ log() {
 }
 
 main() {
-    log "passed flag: $@"
+    log "passed flag: $1"
     case "$1" in
         -p | --port ) get_ports $2;;
         -d | --docker ) get_docker $2;;
