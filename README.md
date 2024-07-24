@@ -11,6 +11,8 @@ It also Implement a `systemd` service to monitor and log activities continuously
 
 bash ./install.sh
 
+# After install exit terminal and open a new terminal and run
+bash devopsfetch -h
 ```
 
 ## CLI & Usage

@@ -62,8 +62,8 @@ setup_systemd() {
 }
 
 setup_logging() {
-    touch /var/log/devopsfetch.log
-    chmod 664 /var/log/devopsfetch.log
+    sudo touch /var/log/devopsfetch.log
+    sudo chmod 664 /var/log/devopsfetch.log
 }
 
 #  check if docker is installed else install it
@@ -79,18 +79,18 @@ if [[ ! $(nginx -v | grep "nginx version") ]]; then
     install_nginx
 fi
 
-# start and create service
-setup_systemd
-
-# setup log file and path
-setup_logging
-
 # installation complete
 # setup necessary commands
 sudo chmod +x install.sh
 sudo mkdir -p $install_path
 sudo cp -R $(pwd)/. $install_path
 sudo chmod +x $install_path/devopsfetch.sh
+
+# start and create service
+setup_systemd
+
+# setup log file and path
+setup_logging
 
 # check if exists bashrc in  installed
 if [[ ! $(cat ~/.bashrc | grep -w devopsfetch) ]]; then

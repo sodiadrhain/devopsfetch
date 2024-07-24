@@ -16,7 +16,6 @@ remove_systemd() {
     sudo systemctl stop $service_name
     sudo systemctl disable $service_name
     sudo rm /etc/systemd/system/$service_name
-    sudo rm /usr/lib/systemd/system/$service_name 
     sudo systemctl daemon-reload
     sudo systemctl reset-failed
 }
@@ -30,3 +29,4 @@ remove_systemd
 sudo chmod +x uninstall.sh
 sed -i '/^alias devopsfetch/d' ~/.bashrc
 source ~/.bashrc
+echo "uninstall completed"
